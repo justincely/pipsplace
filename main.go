@@ -22,6 +22,6 @@ func main() {
 
 func getHealth(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, gin.H{
-		"status": 200, "serving": ADDRESS,
+		"status": "serving",
 	})
 }
