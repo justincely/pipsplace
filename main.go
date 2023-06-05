@@ -8,7 +8,7 @@ import (
 )
 
 // This will be loaded from env later I'm assuming. For now just returns what port is used on localhost.
-const HOST = "127.0.0.1"
+const HOST = "0.0.0.0"
 const PORT = "8080"
 
 var ADDRESS = fmt.Sprintf("%s:%s", HOST, PORT)
