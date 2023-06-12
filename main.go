@@ -3,25 +3,30 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 )
 
-// This will be loaded from env later I'm assuming. For now just returns what port is used on localhost.
-const HOST = "127.0.0.1"
-const PORT = "8080"
-
-var ADDRESS = fmt.Sprintf("%s:%s", HOST, PORT)
-
 func main() {
-	fmt.Println("serving on address: ", ADDRESS)
+	viper.SetConfigFile("config.yaml")
+	err := viper.ReadInConfig()
+	if err != nil {
+		fmt.Println("Fatal error config file: dafault\n", err)
+		os.Exit(1)
+	}
+
+	address := viper.GetString("server.host") + ":" + viper.GetString("server.port")
+
+	fmt.Println("serving on address: ", address)
 	router := gin.Default()
 	router.LoadHTMLFiles("front-end/basic-home.html")
 
 	router.GET("/health", getHealth)
 	router.GET("/", getHomepage)
 
-	http.ListenAndServe(ADDRESS, router)
+	http.ListenAndServe(address, router)
 }
 
 func getHealth(c *gin.Context) {
