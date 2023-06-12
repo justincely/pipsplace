@@ -9,5 +9,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o main ./...
 
 
 FROM alpine:latest AS production
-COPY --from=build-stage /app .
+COPY --from=build-stage /app/main .
+COPY config.yaml .
 CMD ["./main"] 
