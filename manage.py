@@ -3,6 +3,9 @@
 import os
 import sys
 
+# This line below prevents pylint from marking main() with outside of toplevel import error
+# pylint: disable=C0415
+
 
 def main():
     """Run administrative tasks."""
@@ -17,6 +20,8 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+
+# pylint: enable=C0415
 
 if __name__ == "__main__":
     main()
