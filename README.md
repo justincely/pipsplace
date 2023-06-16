@@ -10,3 +10,10 @@ Project utilizes a .env file with the following vars:
 + POSTGRES_USER: name of user to login as to db (if db does not currently exist the created superuser will use this name and POSTGRES_PASSWORD)
 + HOST: db (name of docker-compose postgres service. This passes assigned host value of the container)
 + PORT: port exposed by database (default of Postgres is 5432)
+
+To run:
+
++ clone repository
++ create .env file with values specified above
++ run <docker compose up>
++ access running django server at localhost:8000
