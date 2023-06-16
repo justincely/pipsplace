@@ -15,5 +15,5 @@ To run:
 
 + clone repository
 + create .env file with values specified above
-+ run <docker compose up>
++ run `docker compose up`
 + access running django server at localhost:8000
