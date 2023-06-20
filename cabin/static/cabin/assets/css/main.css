@@ -121,14 +121,14 @@ body {
 	left: 0;
 	z-index: 1000;
 	/* This is the nav bar background color */
-	background-color: rgba(245, 239, 231, 0.95);
-	background-image: url("images/overlay.png");
+	background-color: rgba(174, 182, 197, 0.95); opacity: 0.85; filter: alpha(opacity=50);
+	background-image: url("../../images/overlay.png");
 	width: 100%;
 	height: 3.25em;
 	line-height: 3.25em;
 	text-align: center;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: 700;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 800;
 	text-transform: uppercase;
 	cursor: default;
 }
@@ -192,63 +192,63 @@ body {
 			color: #fff;
 		}
 
-.dropotron {
-	list-style: none;
-	background: #213555;
-	color: #fff;
-	border-radius: 6px;
-	line-height: 2.75em;
-	text-align: center;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
-	padding: 1em 0;
-	text-align: left;
-	min-width: 14em;
-	margin-top: -1em;
-	box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.1);
-}
-
-	.dropotron li {
-		padding-left: 0;
+	.dropotron {
+		list-style: none;
+		background: #213555;
+		color: #fff;
+		border-radius: 6px;
+		line-height: 2.75em;
+		text-align: center;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 1em 0;
+		text-align: left;
+		min-width: 14em;
+		margin-top: -1em;
+		box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.1);
 	}
 
-		.dropotron li > a, .dropotron li > span {
-			display: block;
-			color: #D7DAD8;
-			text-decoration: none;
-			padding: 0 1.25em;
+		.dropotron li {
+			padding-left: 0;
 		}
 
-		.dropotron li:hover > a, .dropotron li:hover > span {
-			color: #fff;
-			background: #7B8780;
+			.dropotron li > a, .dropotron li > span {
+				display: block;
+				color: #D7DAD8;
+				text-decoration: none;
+				padding: 0 1.25em;
+			}
+
+			.dropotron li:hover > a, .dropotron li:hover > span {
+				color: #fff;
+				background: #7B8780;
+			}
+
+			.dropotron li.active > a, .dropotron li.active > span {
+				color: #fff;
+				background: #7B8780;
+			}
+
+			.dropotron li:first-child {
+				border-top: 0;
+			}
+
+		.dropotron.level-0 {
+			margin-top: 1em;
+			font-size: 0.9em;
 		}
 
-		.dropotron li.active > a, .dropotron li.active > span {
-			color: #fff;
-			background: #7B8780;
-		}
-
-		.dropotron li:first-child {
-			border-top: 0;
-		}
-
-	.dropotron.level-0 {
-		margin-top: 1em;
-		font-size: 0.9em;
-	}
-
-		.dropotron.level-0:before {
-			content: '';
-			position: absolute;
-			left: 50%;
-			margin-left: -1em;
-			top: -0.65em;
-			border-bottom: solid 1em #6B7770;
-			border-left: solid 1em transparent;
-			border-right: solid 1em transparent;
-		}
+			.dropotron.level-0:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				margin-left: -1em;
+				top: -0.65em;
+				border-bottom: solid 1em #6B7770;
+				border-left: solid 1em transparent;
+				border-right: solid 1em transparent;
+			}
 		
 /* Type */
 
