@@ -121,7 +121,7 @@ body {
 	left: 0;
 	z-index: 1000;
 	/* This is the nav bar background color */
-	background-color: rgba(174, 182, 197, 0.95); opacity: 0.85; filter: alpha(opacity=50);
+	background-color: rgba(86, 94, 110, 0.95); opacity: 0.85; filter: alpha(opacity=50);
 	background-image: url("../../images/overlay.png");
 	width: 100%;
 	height: 3.25em;
