@@ -26,12 +26,9 @@ jobs:
           with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
-        - 
-          name: Extract metadata (tags, labels) for Docker
-          id: meta
-          uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
-          with:
-            images: justincely/pipsplace
+        -
+          name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v2
         -
           name: Build and Push
           uses: docker/build-push-action@v4
@@ -39,5 +36,4 @@ jobs:
             context: .
             file: ./Dockerfile
             push: true
-            tags: ${{ steps.meta.outputs.tags }}
-            labels: ${{ steps.meta.outputs.labels }}
+            tags: justincely/pipsplace:latest
